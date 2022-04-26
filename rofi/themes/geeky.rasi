@@ -1,0 +1,58 @@
+/*
+ * ROFI minimal
+ * Author: Vijay Senapathi <vijaysenapathi@gmail.com>
+*/
+
+configuration {
+  fullscreen: true;
+  width: 25;
+}
+
+* {
+  red:        #FF5555;
+  orange:     #FFB86C;
+  purple:     #BD93F9;
+  fg:         #F8F8F2;
+  bg:         #282A36;
+  comment:    #6272A4;
+}
+
+window {
+  padding: 0px;
+  background-color: @bg;
+  width: 13%;
+  y-offset: -30%;
+}
+
+mainbox {
+  padding: 1% 0.5%;
+  background-color: @bg;
+  children: [inputbar];
+}
+
+inputbar {
+  margin: 0px;
+  background-color: @bg;
+  children: [textbox-prompt-colon, entry];
+}
+
+textbox-prompt-colon {
+  horizontal-align: 0.5;
+  expand: false;
+  padding: 0px 10px 0px 10px;
+  str: "﮸";
+  text-color: @fg;
+  background-color: @bg;
+  font: "CaskaydiaCove Nerd Font Mono 40";
+}
+
+// The actual text
+entry {
+  margin: 0px;
+  padding: 15px 5px 5px 5px;
+  placeholder: "Program's name?";
+  placeholder-color: @comment;
+  blink: true;
+  text-color: @fg;
+  background-color: @bg;
+}

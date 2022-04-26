@@ -1,0 +1,7 @@
+configuration {
+  terminal: "alacritty";
+  font: "CaskaydiaCove Nerd Font Mono 20";
+  icon-theme: "Papirus";
+}
+@theme "~/.config/rofi/themes/geeky.rasi"
+
