@@ -1,0 +1,50 @@
+Config { 
+         font = "xft:CaskaydiaCove Nerd Font Mono:size=18,Cascadia Mono PL:size=18"
+       , additionalFonts =  ["xft:CaskaydiaCove Nerd Font Mono:size=40", "xft:CaskaydiaCove Nerd Font Mono:size=30", "xft:CaskaydiaCove Nerd Font Mono:size=25"]
+       , borderColor = "black"
+       , border = TopB
+       , bgColor = "#282A36"
+--       , bgColor = "#333333" -- arch brand black
+       , fgColor = "#F8F8F2"
+       , alpha = 255
+       , position = TopH 50
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [
+                      Run BatteryP ["BAT0"] 
+                        [
+                          "-t", "<acstatus>",
+                          "--",
+                          "-i", "<fc=#FFB86E> <left>%</fc>",
+                          "-O", "<fc=#F1FA8C> <left>%</fc>",
+                          "-o", "<fc=#F8F8F2> <left>%</fc>"
+                        ] 10
+                    , Run Date "<fn=2></fn> %b %d  %I:%M %p" "date" 10
+                    , Run Cpu 
+                        [
+                          "-L","3","-H","50",
+                          "--normal","green","--high","red",
+                          "-t", "<fn=2></fn> CPU<total>%",
+                          "-p", "3"
+                        ] 10
+                    , Run Memory ["-t","<fn=2></fn> RAM<used> MB", "-m", "6"] 10
+--                    , Run DiskIO [("/", "<fn=3></fn> R:<read> W:<write>")] ["-m", "5"] 10
+                    , Run Wireless "wlan0" 
+                        [
+                          "-t", "<fn=2></fn> <quality>%",
+                          "-p", "3"
+                        ] 10
+                    , Run UnsafeXMonadLog
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " <fn=1><fc=#1793D1></fc></fn> %UnsafeXMonadLog% }{ %cpu% | %memory% | %wlan0wi% | %date% | %battery% "
+       }
+
