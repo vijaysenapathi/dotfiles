@@ -1,0 +1,56 @@
+window:
+  padding:
+    x: 5
+    y: 5
+
+# Font configuration (changes require restart)
+font:
+  # The size to use.
+  #size: 14  #while working on large monitor
+  size: 18 #while working on just laptop
+  # The normal (roman) font face to use.
+  normal:
+    family: CaskaydiaCove Nerd Font Mono
+    # Style can be specified to pick a specific face.
+  style: Book
+
+  # The bold font face
+  bold:
+    family: Cascadia Mono PL
+    # Style can be specified to pick a specific face.
+    style: Bold
+  # The italic font face
+  italic:
+    family: Cascadia Mono PL
+    # Style can be specified to pick a specific face.
+    style: Light
+# Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    background: '#282A36'
+    foreground: '#F8F8F2'
+
+  # Normal colors
+  normal:
+    black:   '#21222C'
+    red:     '#FF5555'
+    green:   '#50FA7B'
+    yellow:  '#F1FA8c'
+    blue:    '#BD93F9'
+    magenta: '#FF79C6'
+    cyan:    '#8BE9FD'
+    white:   '#F8F8F2'
+
+  # Bright colors
+  bright:
+    black:   '#6272A4'
+    red:     '#FF6E6E'
+    green:   '#69FF94'
+    yellow:  '#FFFFA5'
+    blue:    '#DCA6FF'
+    magenta: '#FF92DF'
+    cyan:    '#A4FFFF'
+    white:   '#FFFFFF'
+env:
+        TERM: xterm-256color
