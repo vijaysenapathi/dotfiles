@@ -1,2 +1,4 @@
 xmonad/*
-!xmonad/xmonad.hs
+xmonad-stack/*
+!xmonad-stack/xmonad.hs
+!xmonad-stack/stack.yml
